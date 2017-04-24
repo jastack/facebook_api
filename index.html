@@ -52,14 +52,16 @@
         });
        }
 
-      FB.api(
-        "me/feed",
-        function (response){
-          if (response && !response.error){
-            console.log(response);
+      function feed(){
+        FB.api(
+          "me/feed",
+          function (response){
+            if (response && !response.error){
+              console.log(response);
+            }
           }
-        }
-      )
+        )
+      }
   </script>
 
   <h2>This is my Facebook API page!</h2>
@@ -72,6 +74,8 @@
     data-width="450"
     data-show-faces="true">
   </div>
+
+  <button type="button" name="Feed" onclick="feed"></button>
 
   </body>
 </html>
